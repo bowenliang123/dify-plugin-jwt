@@ -5,7 +5,7 @@ import jwt
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.utils import json_utils
+from tools.utils import json_utils, jwt_utils
 
 
 class JwtEncoderTool(Tool):
@@ -14,6 +14,11 @@ class JwtEncoderTool(Tool):
         param_headers: str = tool_parameters.get("headers", "{}")
         key: str = tool_parameters.get("key")
         algorithm: str = tool_parameters.get("algorithm")
+
+        # validation
+        jwt_utils.check_valid_algorithm(algorithm)
+        jwt_utils.check_valid_json(param_payload, "payload")
+        jwt_utils.check_valid_json(param_headers, "headers")
 
         payload: dict[str, Any] = json_utils.parse_json(param_payload)
         headers: dict[str, Any] = json_utils.parse_json(param_headers)

@@ -3,13 +3,13 @@ identity:
   author: bowenliang123
   label:
     en_US: JWT decoder
-    zh_Hans: JWT解码器
+    zh_Hans: JWT 解码
     pt_BR: JWT decoder
 description:
   human:
-    en_US: A tool to decode JSON Web Tokens (JWT).
-    zh_Hans: A tool to decode JSON Web Tokens (JWT).
-    pt_BR: A tool to decode JSON Web Tokens (JWT).
+    en_US: Decode a JSON Web Tokens (JWT).
+    zh_Hans: 解码 JSON Web Tokens (JWT).
+    pt_BR: Decode a JSON Web Tokens (JWT).
   llm: A tool to decode JSON Web Tokens (JWT).
 parameters:
   - name: jwt
@@ -17,40 +17,58 @@ parameters:
     required: true
     label:
       en_US: Encoded JWT string
-      zh_Hans: JWT密文
+      zh_Hans: JWT 密文
       pt_BR: Encoded JWT string
     human_description:
       en_US: Encoded JWT string
-      zh_Hans: JWT密文
+      zh_Hans: JWT 密文
       pt_BR: Encoded JWT string
-    llm_description: payload JSON string
-    form: llm
-  - name: key
-    type: string
-    required: true
-    label:
-      en_US: secret key
-      zh_Hans: 加密秘钥
-      pt_BR: secret key
-    human_description:
-      en_US: secret key
-      zh_Hans: 加密秘钥
-      pt_BR: secret key
-    llm_description: secret key for encryption
+    llm_description: Encoded JWT (Java Web Token) string
     form: llm
   - name: algorithm
-    type: string
     required: true
+    type: select
     label:
       en_US: encryption algorithm
-      zh_Hans: 加密方法
+      zh_Hans: 加密算法
       pt_BR: encryption algorithm
     human_description:
       en_US: encryption algorithm
-      zh_Hans: 加密方法
+      zh_Hans: 加密算法
       pt_BR: encryption algorithm
+    default: HS256
+    options:
+      - value: HS256
+        label:
+          en_US: HS256
+      - value: RS256
+        label:
+          en_US: RS256 (RSA)
+      - value: PS256
+        label:
+          en_US: PS256 (RSA)
+      - value: EdDSA
+        label:
+          en_US: EdDSA (Ed25519)
+      - value: ES256
+        label:
+          en_US: ES256 (ECDSA)
     llm_description: encryption algorithm
     form: llm
+  - name: key
+    type: secret-input
+    required: true
+    label:
+      en_US: decryption key
+      zh_Hans: 解密秘钥
+      pt_BR: decryption key
+    human_description:
+      en_US: decryption key
+      zh_Hans: 解密秘钥
+      pt_BR: decryption key
+    llm_description: secret key for decryption
+    form: llm
+
 extra:
   python:
     source: tools/jwt_decoder.py
