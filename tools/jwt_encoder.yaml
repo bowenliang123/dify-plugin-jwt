@@ -1,0 +1,69 @@
+identity:
+  name: jwt_encoder
+  author: bowenliang123
+  label:
+    en_US: JWT Encoder
+    zh_Hans: JWT编码器
+    pt_BR: JWT Encoder
+description:
+  human:
+    en_US: A tool to encode JSON Web Tokens (JWT).
+    zh_Hans: A tool to encode JSON Web Tokens (JWT).
+    pt_BR: A tool to encode JSON Web Tokens (JWT).
+  llm: A tool to encode JSON Web Tokens (JWT).
+parameters:
+  - name: payload
+    type: string
+    required: true
+    label:
+      en_US: payload JSON string
+      zh_Hans: 载荷JSON字符串
+      pt_BR: payload JSON string
+    human_description:
+      en_US: payload JSON string
+      zh_Hans: 载荷JSON字符串
+      pt_BR: payload JSON string
+    llm_description: payload JSON string
+    form: llm
+  - name: key
+    type: string
+    required: true
+    label:
+      en_US: secret key
+      zh_Hans: 加密秘钥
+      pt_BR: secret key
+    human_description:
+      en_US: secret key
+      zh_Hans: 加密秘钥
+      pt_BR: secret key
+    llm_description: secret key for encryption
+    form: llm
+  - name: algorithm
+    type: string
+    required: true
+    label:
+      en_US: encryption algorithm
+      zh_Hans: 加密方法
+      pt_BR: encryption algorithm
+    human_description:
+      en_US: encryption algorithm
+      zh_Hans: 加密方法
+      pt_BR: encryption algorithm
+    llm_description: encryption algorithm
+    form: llm
+  - name: headers
+    type: string
+    required: false
+    label:
+      en_US: header JSON string
+      zh_Hans: Headers JSON字符串
+      pt_BR: header JSON string
+    human_description:
+      en_US: header JSON string
+      zh_Hans: Header JSON字符串
+      pt_BR: header JSON string
+    llm_description: header JSON string
+    form: llm
+extra:
+  python:
+    source: tools/jwt_encoder.py

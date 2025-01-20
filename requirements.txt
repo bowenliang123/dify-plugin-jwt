@@ -1,1 +1,2 @@
-dify_plugin
+dify_plugin==0.0.1b60
+PyJWT~=2.10.1

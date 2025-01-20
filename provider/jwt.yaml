@@ -11,7 +11,8 @@ identity:
     pt_BR: A tool to encode and decode JSON Web Tokens (JWT).
   icon: icon.svg
 tools:
-  - tools/jwt.yaml
+  - tools/jwt_encoder.yaml
+  - tools/jwt_decoder.yaml
 extra:
   python:
     source: provider/jwt.py
