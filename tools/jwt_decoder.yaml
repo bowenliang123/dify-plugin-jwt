@@ -3,7 +3,7 @@ identity:
   author: bowenliang123
   label:
     en_US: JWT decoder
-    zh_Hans: JWT编码器
+    zh_Hans: JWT解码器
     pt_BR: JWT decoder
 description:
   human:
@@ -12,17 +12,17 @@ description:
     pt_BR: A tool to decode JSON Web Tokens (JWT).
   llm: A tool to decode JSON Web Tokens (JWT).
 parameters:
-  - name: payload
+  - name: jwt
     type: string
     required: true
     label:
-      en_US: payload JSON string
-      zh_Hans: 载荷JSON字符串
-      pt_BR: payload JSON string
+      en_US: Encoded JWT string
+      zh_Hans: JWT密文
+      pt_BR: Encoded JWT string
     human_description:
-      en_US: payload JSON string
-      zh_Hans: 载荷JSON字符串
-      pt_BR: payload JSON string
+      en_US: Encoded JWT string
+      zh_Hans: JWT密文
+      pt_BR: Encoded JWT string
     llm_description: payload JSON string
     form: llm
   - name: key

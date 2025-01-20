@@ -1,3 +1,4 @@
+import json
 from collections.abc import Generator
 from typing import Any
 
@@ -12,6 +13,6 @@ class JwtDecoderTool(Tool):
         key: str = tool_parameters.get("key")
         algorithm: str = tool_parameters.get("algorithm")
 
-        decoded_payload = jwt.decode(payload=param_jwt, key=key, algorithm=algorithm)
-
-        yield self.create_text_message(decoded_payload)
+        decoded_payload = jwt.decode(jwt=param_jwt, key=key, algorithms=[algorithm])
+        payload_str = json.dumps(decoded_payload)
+        yield self.create_text_message(payload_str)
