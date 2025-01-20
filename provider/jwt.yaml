@@ -1,0 +1,17 @@
+identity:
+  author: bowenliang123
+  name: jwt
+  label:
+    en_US: jwt
+    zh_Hans: jwt
+    pt_BR: jwt
+  description:
+    en_US: A tool to encode and decode JSON Web Tokens (JWT).
+    zh_Hans: A tool to encode and decode JSON Web Tokens (JWT).
+    pt_BR: A tool to encode and decode JSON Web Tokens (JWT).
+  icon: icon.svg
+tools:
+  - tools/jwt.yaml
+extra:
+  python:
+    source: provider/jwt.py
