@@ -27,32 +27,31 @@ parameters:
     form: llm
   - name: algorithm
     required: true
-    type: select
     label:
-      en_US: encryption algorithm
-      zh_Hans: 加密算法
-      pt_BR: encryption algorithm
+      en_US: decryption algorithm
+      zh_Hans: 解密算法
     human_description:
-      en_US: encryption algorithm
-      zh_Hans: 加密算法
-      pt_BR: encryption algorithm
+      en_US: Supported algorithm, HS256, RS256, PS256, EdDSA, ES256
+      zh_Hans: 支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
     default: HS256
-    options:
-      - value: HS256
-        label:
-          en_US: HS256
-      - value: RS256
-        label:
-          en_US: RS256 (RSA)
-      - value: PS256
-        label:
-          en_US: PS256 (RSA)
-      - value: EdDSA
-        label:
-          en_US: EdDSA (Ed25519)
-      - value: ES256
-        label:
-          en_US: ES256 (ECDSA)
+    type: string
+#    type: select
+#    options:
+#      - value: HS256
+#        label:
+#          en_US: HS256
+#      - value: RS256
+#        label:
+#          en_US: RS256 (RSA)
+#      - value: PS256
+#        label:
+#          en_US: PS256 (RSA)
+#      - value: EdDSA
+#        label:
+#          en_US: EdDSA (Ed25519)
+#      - value: ES256
+#        label:
+#          en_US: ES256 (ECDSA)
     llm_description: encryption algorithm
     form: llm
   - name: key
