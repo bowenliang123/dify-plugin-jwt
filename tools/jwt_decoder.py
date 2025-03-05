@@ -1,6 +1,7 @@
 import json
+import logging
 from collections.abc import Generator
-from typing import Any, Mapping
+from typing import Any
 
 import jwt
 from dify_plugin import Tool
@@ -22,6 +23,17 @@ class JwtDecoderTool(Tool):
         if not key:
             raise ValueError("Invalid input for decryption key")
 
-        decoded_payload: Mapping[str, Any] = jwt.decode(jwt=param_jwt, key=key, algorithms=[algorithm])
-        payload_str: str = json.dumps(decoded_payload)
-        yield self.create_text_message(payload_str)
+        try:
+            decoded_payload: dict[str, Any] = jwt.decode(jwt=param_jwt, key=key, algorithms=[algorithm])
+            extract_headers: bool = ("true" == tool_parameters.get("extract_headers", "false"))
+            if extract_headers:
+                header_obj = jwt.get_unverified_header(param_jwt)
+                decoded_payload["_headers"] = header_obj
+
+            payload_str: str = json.dumps(decoded_payload)
+
+            yield self.create_text_message(payload_str)
+
+        except jwt.ExpiredSignatureError as e:
+            logging.exception("Failed to decode JWT token")
+            raise RuntimeError(f"Failed to decode JWT token, error: {str(e)}")

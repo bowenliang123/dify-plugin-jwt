@@ -61,6 +61,27 @@ parameters:
       zh_Hans: 解密秘钥
     llm_description: secret key for decryption
     form: llm
+  - name: extract_headers
+    type: select
+    required: true
+    default: "true"
+    options:
+      - value: "true"
+        label:
+          en_US: "Yes"
+          zh_Hans: 是
+      - value: "false"
+        label:
+          en_US: "No"
+          zh_Hans: 否
+    label:
+      en_US: Extract headers
+      zh_Hans: 是否提取Headers
+    human_description:
+      en_US: "Whether to extract headers put into \"_headers\" field"
+      zh_Hans: "提取Headers对象并放入\"_headers\"字段"
+    llm_description: Whether to extract headers object
+    form: form
 
 extra:
   python:
