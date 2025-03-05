@@ -4,12 +4,10 @@ identity:
   label:
     en_US: JWT decoder
     zh_Hans: JWT 解码
-    pt_BR: JWT decoder
 description:
   human:
     en_US: Decode a JSON Web Tokens (JWT).
     zh_Hans: 解码 JSON Web Tokens (JWT).
-    pt_BR: Decode a JSON Web Tokens (JWT).
   llm: A tool to decode JSON Web Tokens (JWT).
 parameters:
   - name: jwt
@@ -18,11 +16,9 @@ parameters:
     label:
       en_US: Encoded JWT string
       zh_Hans: JWT 密文
-      pt_BR: Encoded JWT string
     human_description:
       en_US: Encoded JWT string
       zh_Hans: JWT 密文
-      pt_BR: Encoded JWT string
     llm_description: Encoded JWT (JSON Web Token) string
     form: llm
   - name: algorithm
@@ -60,11 +56,9 @@ parameters:
     label:
       en_US: decryption key
       zh_Hans: 解密秘钥
-      pt_BR: decryption key
     human_description:
       en_US: decryption key
       zh_Hans: 解密秘钥
-      pt_BR: decryption key
     llm_description: secret key for decryption
     form: llm
 

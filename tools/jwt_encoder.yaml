@@ -4,12 +4,10 @@ identity:
   label:
     en_US: JWT Encoder
     zh_Hans: JWT 编码
-    pt_BR: JWT Encoder
 description:
   human:
     en_US: Generate encoded JSON Web Tokens (JWT).
     zh_Hans: 生成 JSON Web Tokens (JWT).
-    pt_BR: Generate encoded JSON Web Tokens (JWT).
   llm: A tool to encode JSON Web Tokens (JWT).
 parameters:
   - name: payload
@@ -18,11 +16,9 @@ parameters:
     label:
       en_US: payload JSON string
       zh_Hans: 载荷JSON明文
-      pt_BR: payload JSON string
     human_description:
       en_US: payload JSON string
       zh_Hans: 载荷JSON字符串
-      pt_BR: payload JSON string
     llm_description: payload JSON string
     form: llm
   - name: algorithm
@@ -30,7 +26,6 @@ parameters:
     label:
       en_US: encryption algorithm
       zh_Hans: 加密算法
-      pt_BR: encryption algorithm
     human_description:
       en_US: Supported algorithm, HS256, RS256, PS256, EdDSA, ES256
       zh_Hans: 支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
@@ -61,11 +56,9 @@ parameters:
     label:
       en_US: encryption key
       zh_Hans: 加密秘钥
-      pt_BR: encryption key
     human_description:
       en_US: encryption key
       zh_Hans: 加密秘钥
-      pt_BR: encryption key
     llm_description: secret key for encryption
     form: llm
   - name: headers
@@ -74,11 +67,9 @@ parameters:
     label:
       en_US: Headers JSON string
       zh_Hans: Headers JSON字符串
-      pt_BR: Headers JSON string
     human_description:
       en_US: Headers JSON string
       zh_Hans: Headers JSON字符串
-      pt_BR: Headers JSON string
     llm_description: Headers JSON string
     form: llm
 extra:
