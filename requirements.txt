@@ -1,2 +1,2 @@
-dify_plugin==0.0.1b60
+dify_plugin==0.0.1b70
 pyjwt[crypto]~=2.10.1
