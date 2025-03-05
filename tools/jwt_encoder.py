@@ -10,8 +10,8 @@ from tools.utils import json_utils, jwt_utils
 
 class JwtEncoderTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        param_payload: str = tool_parameters.get("payload", "{}")
-        param_headers: str = tool_parameters.get("headers", "{}")
+        param_payload: str = tool_parameters.get("payload", "{}") or "{}"
+        param_headers: str = tool_parameters.get("headers", "{}") or "{}"
         key: str = tool_parameters.get("key")
         algorithm: str = tool_parameters.get("algorithm")
 
