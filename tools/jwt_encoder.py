@@ -17,7 +17,7 @@ class JwtEncoderTool(Tool):
 
         # validation
         jwt_utils.check_valid_algorithm(algorithm)
-        jwt_utils.check_key_length(key, algorithm)
+        # jwt_utils.check_key_length(key, algorithm)
 
         payload: dict[str, Any] = jwt_utils.parse_valid_json(param_payload, "payload")
         headers: dict[str, Any] = jwt_utils.parse_valid_json(param_headers, "headers")
