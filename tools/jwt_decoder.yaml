@@ -2,7 +2,7 @@ identity:
   name: jwt_decoder
   author: bowenliang123
   label:
-    en_US: JWT decoder
+    en_US: JWT Decoder
     zh_Hans: JWT 解码
 description:
   human:
@@ -56,8 +56,8 @@ parameters:
       en_US: decryption key
       zh_Hans: 解密秘钥
     human_description:
-      en_US: decryption key
-      zh_Hans: 解密秘钥
+      en_US: "Secret key for encryption. For HS256, it is a string; For RS256, PS256, EdDSA, ES256, it is a string starting with \"-----BEGIN PUBLIC KEY-----\""
+      zh_Hans: "加密秘钥, 对于HS256, 是一个秘钥字符串; 对于RS256, PS256, EdDSA, ES256, 是一个\"-----BEGIN PUBLIC KEY-----\"开头的秘钥字符串"
     llm_description: secret key for decryption
     form: llm
   - name: extract_headers

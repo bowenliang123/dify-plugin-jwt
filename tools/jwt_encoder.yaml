@@ -54,11 +54,11 @@ parameters:
     type: secret-input
     required: true
     label:
-      en_US: encryption key
+      en_US: Encryption key
       zh_Hans: 加密秘钥
     human_description:
-      en_US: encryption key
-      zh_Hans: 加密秘钥
+      en_US: "Secret key for encryption. For HS256, it is a string; For RS256, PS256, EdDSA, ES256, it is a string starting with \"-----BEGIN PRIVATE KEY-----\""
+      zh_Hans: "加密秘钥, 对于HS256, 是一个秘钥字符串; 对于RS256, PS256, EdDSA, ES256, 是一个\"-----BEGIN PRIVATE KEY-----\"开头的秘钥字符串"
     llm_description: secret key for encryption
     form: llm
   - name: headers
