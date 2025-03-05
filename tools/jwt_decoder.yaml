@@ -23,7 +23,7 @@ parameters:
       en_US: Encoded JWT string
       zh_Hans: JWT 密文
       pt_BR: Encoded JWT string
-    llm_description: Encoded JWT (Java Web Token) string
+    llm_description: Encoded JWT (JSON Web Token) string
     form: llm
   - name: algorithm
     required: true
