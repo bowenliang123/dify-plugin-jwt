@@ -16,3 +16,9 @@ def check_valid_algorithm(algorithm):
             f"Unsupported algorithm: {algorithm},"
             f" which should be one of supported algorithm names: {supported_algorithms}."
             f" Please refer to doc: https://pyjwt.readthedocs.io/en/stable/usage.html")
+
+
+def check_key_length(key, algorithm):
+    if algorithm == "HS256":
+        if len(key) < 32:
+            raise ValueError("Key length should be at least 32 characters for algorithm HS256.")
