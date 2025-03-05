@@ -27,8 +27,8 @@ parameters:
       en_US: decryption algorithm
       zh_Hans: 解密算法
     human_description:
-      en_US: Supported algorithm, HS256, RS256, PS256, EdDSA, ES256
-      zh_Hans: 支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
+      en_US: one of supported algorithms in HS256, RS256, PS256, EdDSA, ES256
+      zh_Hans: 其中一个支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
     default: HS256
     type: string
     #    type: select
