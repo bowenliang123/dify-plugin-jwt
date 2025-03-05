@@ -1,10 +1,10 @@
 import json
+from typing import Any
 
 
-def check_valid_json(json_str: str, param_name: str = ""):
+def parse_valid_json(json_str: str, param_name: str = "") -> dict[str, Any]:
     try:
-        json.loads(json_str)
-        return True
+        return json.loads(json_str)
     except json.JSONDecodeError as e:
         raise ValueError(f"Invalid JSON string for parameter {param_name}: {e}")
 
@@ -20,5 +20,5 @@ def check_valid_algorithm(algorithm):
 
 def check_key_length(key, algorithm):
     if algorithm == "HS256":
-        if len(key) < 32:
-            raise ValueError("Key length should be at least 32 characters for algorithm HS256.")
+        if len(bytes(key, "utf-8")) < 32:
+            raise ValueError("Key length should be at least 32 bytes for algorithm HS256.")
