@@ -75,8 +75,8 @@ parameters:
           en_US: "No"
           zh_Hans: 否
     label:
-      en_US: Extract headers
-      zh_Hans: 是否提取Headers
+      en_US: Extract headers to _headers field
+      zh_Hans: 是否提取Headers到_headers字段
     human_description:
       en_US: "Whether to extract headers put into \"_headers\" field"
       zh_Hans: "提取Headers对象并放入\"_headers\"字段"
