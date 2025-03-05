@@ -30,26 +30,25 @@ parameters:
       en_US: one of supported algorithms in HS256, RS256, PS256, EdDSA, ES256
       zh_Hans: 其中一个支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
     default: HS256
-    type: string
-    #    type: select
-    #    options:
-    #      - value: HS256
-    #        label:
-    #          en_US: HS256
-    #      - value: RS256
-    #        label:
-    #          en_US: RS256 (RSA)
-    #      - value: PS256
-    #        label:
-    #          en_US: PS256 (RSA)
-    #      - value: EdDSA
-    #        label:
-    #          en_US: EdDSA (Ed25519)
-    #      - value: ES256
-    #        label:
-    #          en_US: ES256 (ECDSA)
+    type: select
+    options:
+      - value: HS256
+        label:
+          en_US: HS256
+      - value: RS256
+        label:
+          en_US: RS256 (RSA)
+      - value: PS256
+        label:
+          en_US: PS256 (RSA)
+      - value: EdDSA
+        label:
+          en_US: EdDSA (Ed25519)
+      - value: ES256
+        label:
+          en_US: ES256 (ECDSA)
     llm_description: encryption algorithm
-    form: llm
+    form: form
   - name: key
     type: secret-input
     required: true
