@@ -13,12 +13,13 @@ parameters:
   - name: payload
     type: string
     required: true
+    default: "{}"
     label:
-      en_US: payload JSON string
-      zh_Hans: 载荷JSON明文
+      en_US: Payload
+      zh_Hans: 载荷
     human_description:
-      en_US: payload JSON string
-      zh_Hans: 载荷JSON字符串
+      en_US: JSON object string for payload
+      zh_Hans: 表示载荷的JSON对象字符串
     llm_description: payload JSON string
     form: llm
   - name: algorithm
@@ -27,8 +28,8 @@ parameters:
       en_US: encryption algorithm
       zh_Hans: 加密算法
     human_description:
-      en_US: Supported algorithm, HS256, RS256, PS256, EdDSA, ES256
-      zh_Hans: 支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
+      en_US: one of supported algorithms in HS256, RS256, PS256, EdDSA, ES256
+      zh_Hans: 其中一个支持的加密算法 HS256, RS256, PS256, EdDSA, ES256
     default: HS256
     type: string
     #    type: select
@@ -65,11 +66,11 @@ parameters:
     type: string
     required: false
     label:
-      en_US: Headers JSON string
-      zh_Hans: Headers JSON字符串
+      en_US: Headers
+      zh_Hans: Headers
     human_description:
-      en_US: Headers JSON string
-      zh_Hans: Headers JSON字符串
+      en_US: JSON object string for headers
+      zh_Hans: 用于表示Header的JSON对象字符串
     llm_description: Headers JSON string
     form: llm
 extra:
