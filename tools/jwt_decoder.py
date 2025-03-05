@@ -27,8 +27,9 @@ class JwtDecoderTool(Tool):
             decoded_payload: dict[str, Any] = jwt.decode(jwt=param_jwt, key=key, algorithms=[algorithm])
             extract_headers: bool = ("true" == tool_parameters.get("extract_headers", "false"))
             if extract_headers:
-                header_obj = jwt.get_unverified_header(param_jwt)
-                decoded_payload["_headers"] = header_obj
+                headers_obj = jwt.get_unverified_header(param_jwt)
+                if headers_obj and not decoded_payload.get("_headers"):
+                    decoded_payload["_headers"] = headers_obj
 
             payload_str: str = json.dumps(decoded_payload)
 
