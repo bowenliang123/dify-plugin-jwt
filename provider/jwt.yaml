@@ -6,8 +6,8 @@ identity:
     zh_Hans: JWT (JSON Web Token)
     pt_BR: JWT (JSON Web Token)
   description:
-    en_US: A tool to encode and decode JSON Web Token (JWT).
-    zh_Hans: A tool to encode and decode JSON Web Token (JWT).
+    en_US: Encode and decode JWT (JSON Web Token).
+    zh_Hans: Encode and decode JWT (JSON Web Token).
   icon: icon.svg
 tools:
   - tools/jwt_encoder.yaml

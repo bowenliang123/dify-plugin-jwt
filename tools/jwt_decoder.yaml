@@ -6,9 +6,9 @@ identity:
     zh_Hans: JWT 解码
 description:
   human:
-    en_US: Decode a JSON Web Token (JWT).
-    zh_Hans: 解码 JSON Web Token (JWT).
-  llm: A tool to decode JSON Web Token (JWT).
+    en_US: Decode a JWT (JSON Web Token).
+    zh_Hans: 解码 JWT (JSON Web Token).
+  llm: A tool to decode JWT (JSON Web Token).
 parameters:
   - name: jwt
     type: string
