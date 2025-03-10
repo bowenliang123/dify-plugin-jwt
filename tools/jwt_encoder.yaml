@@ -6,9 +6,9 @@ identity:
     zh_Hans: JWT 编码
 description:
   human:
-    en_US: Generate encoded JSON Web Tokens (JWT).
-    zh_Hans: 生成 JSON Web Tokens (JWT).
-  llm: A tool to encode JSON Web Tokens (JWT).
+    en_US: Generate encoded JSON Web Token (JWT).
+    zh_Hans: 生成 JSON Web Token (JWT).
+  llm: A tool to encode JSON Web Token (JWT).
 parameters:
   - name: payload
     type: string
