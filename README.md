@@ -1,7 +1,10 @@
 ## JWT
 
 **Author:** [bowenliang123](https://github.com/bowenliang123)
-**Github Repository:** https://github.com/bowenliang123/jwt
+
+**Github Repository:** https://github.com/bowenliang123/dify-plugin-jwt
+
+**Dify Marketplace:** https://marketplace.dify.ai/plugins/bowenliang123/jwt
 
 ### Description
 
@@ -10,6 +13,7 @@ This plugin provides tools to encode and decode JSON Web Token (JWT) as defined 
 JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
 
 As using the `PyJWT` library for implementation, this plugin supports the following algorithms: HS256, RS256, PS256, EdDSA, ES256.
+
 For further usage in the combination of algorithm and keys, please refer [PyJWT's usage docs](https://pyjwt.readthedocs.io/en/stable/usage.html).
 
 
