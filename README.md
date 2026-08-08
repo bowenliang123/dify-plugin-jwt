@@ -32,3 +32,12 @@ When the option `Extract headers to _headers field` is set to `Yes`, the headers
 
 <img src="./_assets/img3.png" width="650" >
 
+
+## Changelog
+
+- 1.1.0
+  - Upgrade dify-plugin SDK to 0.10.1
+  - Upgrade PyJWT to 2.13.0
+
+- 1.0.0
+  - Introduce JWT encode and decode tools
